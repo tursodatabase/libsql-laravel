@@ -1,6 +1,6 @@
 <?php
 
-namespace Turso\LibsqlLaravel;
+namespace Libsql\Laravel;
 
 use Illuminate\Database\Connectors\ConnectionFactory;
 use Illuminate\Database\DatabaseManager;

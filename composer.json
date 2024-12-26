@@ -3,7 +3,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Turso\\LibsqlLaravel\\": "src/"
+            "Libsql\\Laravel\\": "src/"
         }
     },
     "require": {
@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Turso\\LibsqlLaravel\\LibsqlServiceProvider"
+                "Libsql\\Laravel\\LibsqlServiceProvider"
             ]
         }
     },
