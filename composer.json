@@ -7,7 +7,7 @@
         }
     },
     "require": {
-        "turso/libsql": "dev-master",
+        "turso/libsql": "^0.2",
         "illuminate/database": "^11.0",
         "spatie/laravel-package-tools": "^1.16"
     },
@@ -28,11 +28,5 @@
                 "Libsql\\Laravel\\LibsqlServiceProvider"
             ]
         }
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../libsql-php"
-        }
-    ]
+    }
 }
