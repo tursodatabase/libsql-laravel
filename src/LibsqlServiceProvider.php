@@ -40,7 +40,7 @@ class LibsqlServiceProvider extends PackageServiceProvider
 
                     var_dump($config);
 
-                    return new SQLiteConnection(
+                    return new LibsqlConnection(
                         $connection,
                         database: $config["database"] ?? '',
                         config: $config,
@@ -57,7 +57,7 @@ class LibsqlServiceProvider extends PackageServiceProvider
                     $config['driver'] = 'libsql';
                 }
 
-                return new SQLiteConnection(
+                return new LibsqlConnection(
                     function () use ($config) {
                         return new \Libsql\PDO(
                             $config["database"] ?? '',
