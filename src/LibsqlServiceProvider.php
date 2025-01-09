@@ -20,19 +20,7 @@ class LibsqlServiceProvider extends PackageServiceProvider
             return;
         }
 
-        Blueprint::macro('vectorIndex', function ($column, $indexName) {
-            return DB::statement("CREATE INDEX {$indexName} ON {$this->table}(libsql_vector_idx({$column}))");
-        });
-
-        Builder::macro('nearest', function ($index_name, $vector, $limit = 10) {
-            return $this->joinSub(
-                DB::table(DB::raw("vector_top_k('$index_name', '[" . implode(',', $vector) . "]', $limit)")),
-                'v',
-                'todos.rowid',
-                '=',
-                'v.id'
-            );
-        });
+        VectorMacro::register();
     }
 
 

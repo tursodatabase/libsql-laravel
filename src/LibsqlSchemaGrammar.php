@@ -6,7 +6,7 @@ use Illuminate\Database\Schema\Grammars\SQLiteGrammar;
 use Illuminate\Support\Fluent;
 
 class LibsqlSchemaGrammar extends SQLiteGrammar {
-    function typeVector(Fluent $column): string {
+    protected function typeVector(Fluent $column): string {
         if (isset($column->dimensions) && $column->dimensions !== '') {
             return "F32_BLOB({$column->dimensions})";
         }
