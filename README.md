@@ -50,7 +50,7 @@
 ## Features
 
 - 🔌 Works offline with [Embedded Replicas](https://docs.turso.tech/features/embedded-replicas/introduction)
-- 🌎 Works with remote Turso databases
+- 🌎 Works with remote Turso databases (on Fly)
 - ✨ Works with Turso [AI & Vector Search](https://docs.turso.tech/features/ai-and-embeddings)
 - 🐘 Works with Laravel's Eloquent ORM
 
