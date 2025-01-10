@@ -2,3 +2,7 @@
 .php-cs-fixer.cache
 .phpactor.json
 vendor/
+*.cache
+.env*
+.DS_Store
+*.db
