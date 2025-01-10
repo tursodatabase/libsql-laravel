@@ -14,8 +14,7 @@
 <p align="center">
   <a href="https://tur.so/turso-php"><strong>Turso</strong></a> ·
   <a href="https://docs.turso.tech"><strong>Docs</strong></a> ·
-  <a href="https://docs.turso.tech/sdk/laravel/quickstart"><strong>Quickstart</strong></a> ·
-  <a href="https://docs.turso.tech/sdk/laravel/reference"><strong>SDK Reference</strong></a> ·
+  <a href="https://docs.turso.tech/sdk/php/guides/laravel"><strong>Quickstart</strong></a> ·
   <a href="https://turso.tech/blog"><strong>Blog &amp; Tutorials</strong></a>
 </p>
 
@@ -88,7 +87,7 @@ return [
 
 ## Documentation
 
-Visit our [official documentation](https://docs.turso.tech/sdk/laravel).
+Visit our [official documentation](https://docs.turso.tech/sdk/php/guides/laravel).
 
 ## Support
 
