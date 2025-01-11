@@ -6,3 +6,6 @@ vendor/
 .env*
 .DS_Store
 *.db
+
+build/
+.vscode/

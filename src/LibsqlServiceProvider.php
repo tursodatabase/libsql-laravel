@@ -58,8 +58,6 @@ class LibsqlServiceProvider extends PackageServiceProvider
                         );
                     };
 
-                    var_dump($config);
-
                     return new LibsqlConnection(
                         $connection,
                         database: $config["database"] ?? '',
@@ -85,7 +83,7 @@ class LibsqlServiceProvider extends PackageServiceProvider
                             options: $config
                         );
                     },
-                    database: $config["database"],
+                    database: $config["database"] ?? '',
                     config: $config,
                 );
             });
