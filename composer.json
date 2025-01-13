@@ -6,6 +6,12 @@
             "Libsql\\Laravel\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Libsql\\Laravel\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
     "require": {
         "turso/libsql": "^0.2",
         "illuminate/database": "^11.0",
@@ -14,7 +20,9 @@
     "require-dev": {
         "phpunit/phpunit": "^11",
         "friendsofphp/php-cs-fixer": "^3.64",
-        "phpstan/phpstan": "2.0.x-dev"
+        "phpstan/phpstan": "2.0.x-dev",
+        "orchestra/testbench": "^9.9",
+        "pestphp/pest": "^3.7"
     },
     "authors": [
         {
@@ -27,6 +35,11 @@
             "providers": [
                 "Libsql\\Laravel\\LibsqlServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
