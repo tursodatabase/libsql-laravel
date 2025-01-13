@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Libsql\Laravel;
 
 use Illuminate\Database\Schema\Grammars\SQLiteGrammar;

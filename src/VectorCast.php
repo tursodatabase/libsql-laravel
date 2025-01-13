@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Libsql\Laravel;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
@@ -13,7 +15,7 @@ class VectorCast implements CastsAttributes {
 
     public function get($model, $key, $value, $attributes): mixed
     {
-        return json_decode($value);
+        return json_encode($value);
     }
 }
 
