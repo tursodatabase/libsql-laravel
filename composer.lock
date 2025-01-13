@@ -1470,16 +1470,16 @@
         },
         {
             "name": "turso/libsql",
-            "version": "v0.2.2",
+            "version": "v0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tursodatabase/libsql-php.git",
-                "reference": "b334959e7de72f7bfb4a971310290069374a86b5"
+                "reference": "99534aefa9c11a6a4eef348e1edd5f0afd5d9db3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/b334959e7de72f7bfb4a971310290069374a86b5",
-                "reference": "b334959e7de72f7bfb4a971310290069374a86b5",
+                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/99534aefa9c11a6a4eef348e1edd5f0afd5d9db3",
+                "reference": "99534aefa9c11a6a4eef348e1edd5f0afd5d9db3",
                 "shasum": ""
             },
             "require": {
@@ -1517,9 +1517,9 @@
             "description": "libSQL bindings for PHP",
             "support": {
                 "issues": "https://github.com/tursodatabase/libsql-php/issues",
-                "source": "https://github.com/tursodatabase/libsql-php/tree/v0.2.2"
+                "source": "https://github.com/tursodatabase/libsql-php/tree/v0.2.3"
             },
-            "time": "2025-01-12T23:18:59+00:00"
+            "time": "2025-01-13T02:42:22+00:00"
         },
         {
             "name": "voku/portable-ascii",
