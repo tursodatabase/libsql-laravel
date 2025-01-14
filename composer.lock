@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2824c72c37ab937c9247d373153dcc98",
+    "content-hash": "61a4fb4106d38d495b6671415f3cfe40",
     "packages": [
         {
             "name": "brick/math",
@@ -1470,16 +1470,16 @@
         },
         {
             "name": "turso/libsql",
-            "version": "v0.2.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tursodatabase/libsql-php.git",
-                "reference": "99534aefa9c11a6a4eef348e1edd5f0afd5d9db3"
+                "reference": "0a8839cbb3a52fc86201a0d0f059746a77c2ebf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/99534aefa9c11a6a4eef348e1edd5f0afd5d9db3",
-                "reference": "99534aefa9c11a6a4eef348e1edd5f0afd5d9db3",
+                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/0a8839cbb3a52fc86201a0d0f059746a77c2ebf4",
+                "reference": "0a8839cbb3a52fc86201a0d0f059746a77c2ebf4",
                 "shasum": ""
             },
             "require": {
@@ -1491,6 +1491,7 @@
                 "phpstan/phpstan": "2.0.x-dev",
                 "phpunit/phpunit": "^11"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -1517,9 +1518,9 @@
             "description": "libSQL bindings for PHP",
             "support": {
                 "issues": "https://github.com/tursodatabase/libsql-php/issues",
-                "source": "https://github.com/tursodatabase/libsql-php/tree/v0.2.3"
+                "source": "https://github.com/tursodatabase/libsql-php/tree/master"
             },
-            "time": "2025-01-13T02:42:22+00:00"
+            "time": "2025-01-14T14:08:27+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -1997,16 +1998,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.67.1",
+            "version": "v3.68.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "db533e9aeb19c33033b6a1b734c8de4f4ebaa7dc"
+                "reference": "73f78d8b2b34a0dd65fedb434a602ee4c2c8ad4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/db533e9aeb19c33033b6a1b734c8de4f4ebaa7dc",
-                "reference": "db533e9aeb19c33033b6a1b734c8de4f4ebaa7dc",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/73f78d8b2b34a0dd65fedb434a602ee4c2c8ad4c",
+                "reference": "73f78d8b2b34a0dd65fedb434a602ee4c2c8ad4c",
                 "shasum": ""
             },
             "require": {
@@ -2088,7 +2089,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.67.1"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.68.0"
             },
             "funding": [
                 {
@@ -2096,7 +2097,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-12T12:20:47+00:00"
+            "time": "2025-01-13T17:01:01+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2718,16 +2719,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.2",
+            "version": "11.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "153d0531b9f7e883c5053160cad6dd5ac28140b3"
+                "reference": "30e319e578a7b5da3543073e30002bf82042f701"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/153d0531b9f7e883c5053160cad6dd5ac28140b3",
-                "reference": "153d0531b9f7e883c5053160cad6dd5ac28140b3",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/30e319e578a7b5da3543073e30002bf82042f701",
+                "reference": "30e319e578a7b5da3543073e30002bf82042f701",
                 "shasum": ""
             },
             "require": {
@@ -2748,7 +2749,7 @@
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
                 "sebastian/code-unit": "^3.0.2",
-                "sebastian/comparator": "^6.2.1",
+                "sebastian/comparator": "^6.3.0",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
                 "sebastian/exporter": "^6.3.0",
@@ -2799,7 +2800,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.2"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.3"
             },
             "funding": [
                 {
@@ -2815,7 +2816,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-21T05:51:08+00:00"
+            "time": "2025-01-13T09:36:00+00:00"
         },
         {
             "name": "psr/event-dispatcher",
@@ -5608,7 +5609,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phpstan/phpstan": 20
+        "phpstan/phpstan": 20,
+        "turso/libsql": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
