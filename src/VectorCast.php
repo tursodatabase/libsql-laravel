@@ -7,7 +7,8 @@ namespace Libsql\Laravel;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Support\Facades\DB;
 
-class VectorCast implements CastsAttributes {
+class VectorCast implements CastsAttributes
+{
     public function set($model, $key, $value, $attributes)
     {
         return DB::raw("vector32('[" . implode(',', $value) . "]')");
@@ -18,4 +19,3 @@ class VectorCast implements CastsAttributes {
         return json_encode($value);
     }
 }
-

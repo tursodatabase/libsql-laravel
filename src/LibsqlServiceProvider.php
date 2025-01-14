@@ -49,21 +49,17 @@ class LibsqlServiceProvider extends PackageServiceProvider
     {
         parent::register();
         $this->app->singleton('db.factory', function ($app) {
-            return new class($app) extends ConnectionFactory {
+            return new class ($app) extends ConnectionFactory {
                 protected function createConnection($driver, $connection, $database, $prefix = '', array $config = [])
                 {
-                    $connection = function () use ($config) {
-                        return new \Libsql\PDO(
-                            $config["database"] ?? '',
-                            password: $config["password"] ?? '',
-                            options: $config,
-                        );
-                    };
-
-                    var_dump($config);
-
                     return new LibsqlConnection(
-                        $connection,
+                        function () use ($config) {
+                            return new \Libsql\PDO(
+                                database: $config["database"] ?? null,
+                                password: $config["password"] ?? null,
+                                options: $config,
+                            );
+                        },
                         database: $config["database"] ?? '',
                         config: $config,
                     );
@@ -82,12 +78,12 @@ class LibsqlServiceProvider extends PackageServiceProvider
                 return new LibsqlConnection(
                     function () use ($config) {
                         return new \Libsql\PDO(
-                            $config["database"] ?? '',
-                            password: $config["password"] ?? '',
+                            $config["database"] ?? null,
+                            password: $config["password"] ?? null,
                             options: $config
                         );
                     },
-                    database: $config["database"],
+                    database: $config["database"] ?? null,
                     config: $config,
                 );
             });
