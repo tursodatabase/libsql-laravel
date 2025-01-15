@@ -2,3 +2,5 @@
 .php-cs-fixer.cache
 .phpactor.json
 vendor/
+tests/database/*
+!tests/database/.gitkeep
