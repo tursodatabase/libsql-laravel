@@ -1,11 +1,15 @@
 <?php
+declare(strict_types=1);
+
+declare(strict_types=1);
 
 namespace Libsql\Laravel;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Support\Facades\DB;
 
-class VectorCast implements CastsAttributes {
+class VectorCast implements CastsAttributes
+{
     public function set($model, $key, $value, $attributes)
     {
         return DB::raw("vector32('[" . implode(',', $value) . "]')");
@@ -13,7 +17,6 @@ class VectorCast implements CastsAttributes {
 
     public function get($model, $key, $value, $attributes): mixed
     {
-        return json_decode($value);
+        return json_encode($value);
     }
 }
-
