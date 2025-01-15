@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "**.php"
-      - ".github/workflows/run-tests.yml"
+      - ".github/workflows/run_tests.yml"
       - "phpunit.xml.dist"
       - "composer.json"
       - "composer.lock"
@@ -19,7 +19,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest]
-        php: [8.4, 8.3, 8.2]
+        php: [8.4, 8.3]
         laravel: [11.*]
         stability: [prefer-lowest, prefer-stable]
         include:
