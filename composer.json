@@ -3,18 +3,24 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Libsql\\Laravel\\": "src/"
-        }
+            "Libsql\\Laravel\\": "src/",
+            "Libsql\\Laravel\\Tests\\": "tests/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "require": {
         "turso/libsql": "dev-master",
         "illuminate/database": "^11.0",
-        "spatie/laravel-package-tools": "^1.16"
+        "spatie/laravel-package-tools": "^1.16",
+        "turso/libsql": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11",
         "friendsofphp/php-cs-fixer": "^3.64",
-        "phpstan/phpstan": "2.0.x-dev"
+        "phpstan/phpstan": "2.0.x-dev",
+        "pestphp/pest": "^3.7",
+        "orchestra/testbench": "^9.9"
     },
     "authors": [
         {
@@ -22,11 +28,27 @@
             "email": "levyddsa@gmail.com"
         }
     ],
+    "scripts": {
+        "test": [
+            "@php vendor/bin/pest"
+        ],
+        "test-feature": [
+            "@php vendor/bin/pest --testsuite=Feature"
+        ],
+        "test-unit": [
+            "@php vendor/bin/pest --testsuite=Unit"
+        ]
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "Libsql\\Laravel\\LibsqlServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }

@@ -6,3 +6,5 @@ vendor/
 .env*
 .DS_Store
 *.db
+tests/database/*
+!tests/database/.gitkeep
