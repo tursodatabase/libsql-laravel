@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b95ce94a77328b9e1ba329af363e10c0",
+    "content-hash": "1c147e6e4ee4d68777cbde607291169c",
     "packages": [
         {
             "name": "brick/math",
@@ -302,19 +302,6 @@
             "time": "2024-02-18T20:23:39+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "illuminate/collections",
-            "version": "v11.37.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/collections.git",
-                "reference": "9100b083eeb85d38d78fc1de28f7326596ab2eda"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/9100b083eeb85d38d78fc1de28f7326596ab2eda",
-                "reference": "9100b083eeb85d38d78fc1de28f7326596ab2eda",
-=======
             "name": "doctrine/lexer",
             "version": "3.0.1",
             "source": {
@@ -326,7 +313,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/lexer/zipball/31ad66abc0fc9e1a1f2d9bc6a42668d2fbbcd6dd",
                 "reference": "31ad66abc0fc9e1a1f2d9bc6a42668d2fbbcd6dd",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "shasum": ""
             },
             "require": {
@@ -767,13 +753,6 @@
                 "issues": "https://github.com/guzzle/guzzle/issues",
                 "source": "https://github.com/guzzle/guzzle/tree/7.9.2"
             },
-<<<<<<< HEAD
-            "time": "2024-12-18T14:14:45+00:00"
-        },
-        {
-            "name": "illuminate/conditionable",
-            "version": "v11.37.0",
-=======
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -793,7 +772,6 @@
         {
             "name": "guzzlehttp/promises",
             "version": "2.0.4",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
@@ -875,13 +853,8 @@
             "time": "2024-10-17T10:06:22+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "illuminate/container",
-            "version": "v11.37.0",
-=======
             "name": "guzzlehttp/psr7",
             "version": "2.7.0",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
@@ -996,13 +969,8 @@
             "time": "2024-07-18T11:15:46+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "illuminate/contracts",
-            "version": "v11.37.0",
-=======
             "name": "guzzlehttp/uri-template",
             "version": "v1.0.3",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/uri-template.git",
@@ -1087,19 +1055,6 @@
             "time": "2023-12-03T19:50:20+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "illuminate/database",
-            "version": "v11.37.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/database.git",
-                "reference": "151abf61ce770b823220aa4187f50fd47f18d61f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/151abf61ce770b823220aa4187f50fd47f18d61f",
-                "reference": "151abf61ce770b823220aa4187f50fd47f18d61f",
-=======
             "name": "laravel/framework",
             "version": "v11.38.2",
             "source": {
@@ -1111,133 +1066,14 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/9d290aa90fcad44048bedca5219d2b872e98772a",
                 "reference": "9d290aa90fcad44048bedca5219d2b872e98772a",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.9.3|^0.10.2|^0.11|^0.12",
-<<<<<<< HEAD
-                "ext-pdo": "*",
-                "illuminate/collections": "^11.0",
-                "illuminate/container": "^11.0",
-                "illuminate/contracts": "^11.0",
-                "illuminate/macroable": "^11.0",
-                "illuminate/support": "^11.0",
-                "laravel/serializable-closure": "^1.3|^2.0",
-                "php": "^8.2"
-            },
-            "suggest": {
-                "ext-filter": "Required to use the Postgres database driver.",
-                "fakerphp/faker": "Required to use the eloquent factory builder (^1.24).",
-                "illuminate/console": "Required to use the database commands (^11.0).",
-                "illuminate/events": "Required to use the observers with Eloquent (^11.0).",
-                "illuminate/filesystem": "Required to use the migrations (^11.0).",
-                "illuminate/pagination": "Required to paginate the result set (^11.0).",
-                "symfony/finder": "Required to use Eloquent model factories (^7.0)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Database\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "The Illuminate Database package.",
-            "homepage": "https://laravel.com",
-            "keywords": [
-                "database",
-                "laravel",
-                "orm",
-                "sql"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2024-12-26T21:42:46+00:00"
-        },
-        {
-            "name": "illuminate/macroable",
-            "version": "v11.37.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/macroable.git",
-                "reference": "e1cb9e51b9ed5d3c9bc1ab431d0a52fe42a990ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/macroable/zipball/e1cb9e51b9ed5d3c9bc1ab431d0a52fe42a990ed",
-                "reference": "e1cb9e51b9ed5d3c9bc1ab431d0a52fe42a990ed",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Support\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "The Illuminate Macroable package.",
-            "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2024-06-28T20:10:30+00:00"
-        },
-        {
-            "name": "illuminate/support",
-            "version": "v11.37.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/support.git",
-                "reference": "388c916b143a104e732cbaf7e6b19cd7a4e21a1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/388c916b143a104e732cbaf7e6b19cd7a4e21a1e",
-                "reference": "388c916b143a104e732cbaf7e6b19cd7a4e21a1e",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/inflector": "^2.0",
-=======
                 "composer-runtime-api": "^2.2",
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.4",
                 "egulias/email-validator": "^3.2.1|^4.0",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "ext-ctype": "*",
                 "ext-filter": "*",
                 "ext-hash": "*",
@@ -1349,17 +1185,6 @@
                 "symfony/translation": "^7.0.3"
             },
             "suggest": {
-<<<<<<< HEAD
-                "illuminate/filesystem": "Required to use the Composer class (^11.0).",
-                "laravel/serializable-closure": "Required to use the once function (^1.3|^2.0).",
-                "league/commonmark": "Required to use Str::markdown() and Stringable::markdown() (^2.6).",
-                "league/uri": "Required to use the Uri class (^7.5.1).",
-                "ramsey/uuid": "Required to use Str::uuid() (^4.7).",
-                "symfony/process": "Required to use the Composer class (^7.0).",
-                "symfony/uid": "Required to use Str::ulid() (^7.0).",
-                "symfony/var-dumper": "Required to use the dd function (^7.0).",
-                "vlucas/phpdotenv": "Required to use the Env class and env helper (^5.6.1)."
-=======
                 "ably/ably-php": "Required to use the Ably broadcast driver (^1.0).",
                 "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage, and SES mail driver (^3.322.9).",
                 "brianium/paratest": "Required to run tests in parallel (^7.0|^8.0).",
@@ -1394,7 +1219,6 @@
                 "symfony/mailgun-mailer": "Required to enable support for the Mailgun mail transport (^7.0).",
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^7.0).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^7.0)."
->>>>>>> be748b3 (feat(deps): add testing dependencie)
             },
             "type": "library",
             "extra": {
@@ -1442,9 +1266,6 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-<<<<<<< HEAD
-            "time": "2024-12-20T14:43:22+00:00"
-=======
             "time": "2025-01-15T00:06:46+00:00"
         },
         {
@@ -1505,7 +1326,6 @@
                 "source": "https://github.com/laravel/prompts/tree/v0.3.3"
             },
             "time": "2024-12-30T15:53:31+00:00"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
         },
         {
             "name": "laravel/serializable-closure",
@@ -1569,17 +1389,6 @@
             "time": "2024-12-16T15:26:28+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "nesbot/carbon",
-            "version": "3.8.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "129700ed449b1f02d70272d2ac802357c8c30c58"
-            },
-            "dist": {
-                "type": "zip",
-=======
             "name": "league/commonmark",
             "version": "2.6.1",
             "source": {
@@ -2243,7 +2052,6 @@
             },
             "dist": {
                 "type": "zip",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/129700ed449b1f02d70272d2ac802357c8c30c58",
                 "reference": "129700ed449b1f02d70272d2ac802357c8c30c58",
                 "shasum": ""
@@ -2339,8 +2147,6 @@
                 }
             ],
             "time": "2024-12-27T09:25:35+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "nette/schema",
@@ -2651,7 +2457,6 @@
                 }
             ],
             "time": "2024-07-20T21:41:07+00:00"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
         },
         {
             "name": "psr/clock",
@@ -3066,17 +2871,6 @@
             "time": "2021-10-29T13:26:27+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "spatie/laravel-package-tools",
-            "version": "1.18.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "8332205b90d17164913244f4a8e13ab7e6761d29"
-            },
-            "dist": {
-                "type": "zip",
-=======
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -3311,7 +3105,6 @@
             },
             "dist": {
                 "type": "zip",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/8332205b90d17164913244f4a8e13ab7e6761d29",
                 "reference": "8332205b90d17164913244f4a8e13ab7e6761d29",
                 "shasum": ""
@@ -4870,17 +4663,6 @@
             "time": "2024-09-09T11:45:10+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "symfony/translation",
-            "version": "v7.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/translation.git",
-                "reference": "e2674a30132b7cc4d74540d6c2573aa363f05923"
-            },
-            "dist": {
-                "type": "zip",
-=======
             "name": "symfony/polyfill-uuid",
             "version": "v1.31.0",
             "source": {
@@ -5281,7 +5063,6 @@
             },
             "dist": {
                 "type": "zip",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "url": "https://api.github.com/repos/symfony/translation/zipball/e2674a30132b7cc4d74540d6c2573aa363f05923",
                 "reference": "e2674a30132b7cc4d74540d6c2573aa363f05923",
                 "shasum": ""
@@ -5663,21 +5444,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tursodatabase/libsql-php.git",
-<<<<<<< HEAD
-                "reference": "0a8839cbb3a52fc86201a0d0f059746a77c2ebf4"
+                "reference": "631b3cefc2245722eb9bdf0e4b845e92fafe9812"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/0a8839cbb3a52fc86201a0d0f059746a77c2ebf4",
-                "reference": "0a8839cbb3a52fc86201a0d0f059746a77c2ebf4",
-=======
-                "reference": "6b473bf0e4911452580454e157907e63ea325fe1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/6b473bf0e4911452580454e157907e63ea325fe1",
-                "reference": "6b473bf0e4911452580454e157907e63ea325fe1",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
+                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/631b3cefc2245722eb9bdf0e4b845e92fafe9812",
+                "reference": "631b3cefc2245722eb9bdf0e4b845e92fafe9812",
                 "shasum": ""
             },
             "require": {
@@ -5716,12 +5488,9 @@
             "description": "libSQL bindings for PHP",
             "support": {
                 "issues": "https://github.com/tursodatabase/libsql-php/issues",
-                "source": "https://github.com/tursodatabase/libsql-php/tree/master"
+                "source": "https://github.com/tursodatabase/libsql-php/tree/v0.2.4"
             },
-<<<<<<< HEAD
-            "time": "2025-01-14T14:08:27+00:00"
-=======
-            "time": "2025-01-14T15:35:45+00:00"
+            "time": "2025-01-15T13:57:21+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5806,7 +5575,6 @@
                 }
             ],
             "time": "2024-07-20T21:52:34+00:00"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
         },
         {
             "name": "voku/portable-ascii",
@@ -6542,17 +6310,6 @@
             "time": "2024-08-06T10:04:20+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.68.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "73f78d8b2b34a0dd65fedb434a602ee4c2c8ad4c"
-            },
-            "dist": {
-                "type": "zip",
-=======
             "name": "filp/whoops",
             "version": "2.16.0",
             "source": {
@@ -6633,7 +6390,6 @@
             },
             "dist": {
                 "type": "zip",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/73f78d8b2b34a0dd65fedb434a602ee4c2c8ad4c",
                 "reference": "73f78d8b2b34a0dd65fedb434a602ee4c2c8ad4c",
                 "shasum": ""
@@ -6726,8 +6482,6 @@
                 }
             ],
             "time": "2025-01-13T17:01:01+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -7065,7 +6819,6 @@
                 "source": "https://github.com/mockery/mockery"
             },
             "time": "2024-05-16T03:13:13+00:00"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
         },
         {
             "name": "myclabs/deep-copy",
@@ -7184,8 +6937,6 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
             },
             "time": "2024-12-30T11:07:19+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "nunomaduro/collision",
@@ -7963,7 +7714,6 @@
                 }
             ],
             "time": "2024-09-22T07:54:40+00:00"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
         },
         {
             "name": "phar-io/manifest",
@@ -8689,18 +8439,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
-            "version": "11.5.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "30e319e578a7b5da3543073e30002bf82042f701"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/30e319e578a7b5da3543073e30002bf82042f701",
-                "reference": "30e319e578a7b5da3543073e30002bf82042f701",
-=======
             "version": "11.5.1",
             "source": {
                 "type": "git",
@@ -8711,7 +8449,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
                 "reference": "2b94d4f2450b9869fa64a46fd8a6a41997aef56a",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "shasum": ""
             },
             "require": {
@@ -8731,13 +8468,8 @@
                 "phpunit/php-text-template": "^4.0.1",
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
-<<<<<<< HEAD
-                "sebastian/code-unit": "^3.0.2",
-                "sebastian/comparator": "^6.3.0",
-=======
                 "sebastian/code-unit": "^3.0.1",
                 "sebastian/comparator": "^6.2.1",
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
                 "sebastian/exporter": "^6.3.0",
@@ -8788,11 +8520,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-<<<<<<< HEAD
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.3"
-=======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.1"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
             },
             "funding": [
                 {
@@ -8808,11 +8536,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-01-13T09:36:00+00:00"
-=======
             "time": "2024-12-11T10:52:48+00:00"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
         },
         {
             "name": "psy/psysh",
@@ -10398,258 +10122,6 @@
             "time": "2024-10-20T05:08:20+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "symfony/console",
-            "version": "v7.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/polyfill-mbstring": "~1.0",
-                "symfony/service-contracts": "^2.5|^3",
-                "symfony/string": "^6.4|^7.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<6.4",
-                "symfony/dotenv": "<6.4",
-                "symfony/event-dispatcher": "<6.4",
-                "symfony/lock": "<6.4",
-                "symfony/process": "<6.4"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0|2.0|3.0"
-            },
-            "require-dev": {
-                "psr/log": "^1|^2|^3",
-                "symfony/config": "^6.4|^7.0",
-                "symfony/dependency-injection": "^6.4|^7.0",
-                "symfony/event-dispatcher": "^6.4|^7.0",
-                "symfony/http-foundation": "^6.4|^7.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/lock": "^6.4|^7.0",
-                "symfony/messenger": "^6.4|^7.0",
-                "symfony/process": "^6.4|^7.0",
-                "symfony/stopwatch": "^6.4|^7.0",
-                "symfony/var-dumper": "^6.4|^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Eases the creation of beautiful and testable command line interfaces",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "cli",
-                "command-line",
-                "console",
-                "terminal"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/console/tree/v7.2.1"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-12-11T03:49:26+00:00"
-        },
-        {
-            "name": "symfony/event-dispatcher",
-            "version": "v7.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "910c5db85a5356d0fea57680defec4e99eb9c8c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/910c5db85a5356d0fea57680defec4e99eb9c8c1",
-                "reference": "910c5db85a5356d0fea57680defec4e99eb9c8c1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/event-dispatcher-contracts": "^2.5|^3"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<6.4",
-                "symfony/service-contracts": "<2.5"
-            },
-            "provide": {
-                "psr/event-dispatcher-implementation": "1.0",
-                "symfony/event-dispatcher-implementation": "2.0|3.0"
-            },
-            "require-dev": {
-                "psr/log": "^1|^2|^3",
-                "symfony/config": "^6.4|^7.0",
-                "symfony/dependency-injection": "^6.4|^7.0",
-                "symfony/error-handler": "^6.4|^7.0",
-                "symfony/expression-language": "^6.4|^7.0",
-                "symfony/http-foundation": "^6.4|^7.0",
-                "symfony/service-contracts": "^2.5|^3",
-                "symfony/stopwatch": "^6.4|^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/event-dispatcher/tree/v7.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-09-25T14:21:43+00:00"
-        },
-        {
-            "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/7642f5e970b672283b7823222ae8ef8bbc160b9f",
-                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1",
-                "psr/event-dispatcher": "^1"
-            },
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/contracts",
-                    "name": "symfony/contracts"
-                },
-                "branch-alias": {
-                    "dev-main": "3.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\EventDispatcher\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Generic abstractions related to dispatching event",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.1"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-09-25T14:20:29+00:00"
-        },
-        {
-=======
->>>>>>> be748b3 (feat(deps): add testing dependencie)
             "name": "symfony/filesystem",
             "version": "v7.2.0",
             "source": {
@@ -10716,73 +10188,6 @@
             "time": "2024-10-25T15:15:23+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "symfony/finder",
-            "version": "v7.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "87a71856f2f56e4100373e92529eed3171695cfb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/87a71856f2f56e4100373e92529eed3171695cfb",
-                "reference": "87a71856f2f56e4100373e92529eed3171695cfb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "symfony/filesystem": "^6.4|^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Finds files and directories via an intuitive fluent interface",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/finder/tree/v7.2.2"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-12-30T19:00:17+00:00"
-        },
-        {
-=======
->>>>>>> be748b3 (feat(deps): add testing dependencie)
             "name": "symfony/options-resolver",
             "version": "v7.2.0",
             "source": {
@@ -10945,16 +10350,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-<<<<<<< HEAD
-                    "url": "https://github.com/symfony/contracts",
-                    "name": "symfony/contracts"
-                },
-                "branch-alias": {
-                    "dev-main": "3.5-dev"
-=======
                     "url": "https://github.com/symfony/polyfill",
                     "name": "symfony/polyfill"
->>>>>>> be748b3 (feat(deps): add testing dependencie)
                 }
             },
             "autoload": {
