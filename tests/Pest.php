@@ -35,5 +35,5 @@ function clearDirectory(): void
 
 function shouldSkipTests()
 {
-    return true;
+    return false;
 }
