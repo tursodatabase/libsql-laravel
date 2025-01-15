@@ -1,17 +1,17 @@
 <?php
+declare(strict_types=1);
 
 declare(strict_types=1);
 
 namespace Libsql\Laravel;
 
-use Illuminate\Database\Connectors\ConnectionFactory;
-use Illuminate\Database\DatabaseManager;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
+use Libsql\Laravel\Vector\VectorMacro;
 use Spatie\LaravelPackageTools\Package;
+use Illuminate\Database\DatabaseManager;
+use Libsql\Laravel\Database\LibsqlConnector;
+use Libsql\Laravel\Database\LibsqlConnection;
+use Libsql\Laravel\Database\LibsqlConnectionFactory;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Illuminate\Database\Query\Builder;
 
 class LibsqlServiceProvider extends PackageServiceProvider
 {
@@ -21,24 +21,7 @@ class LibsqlServiceProvider extends PackageServiceProvider
         if (config('database.default') !== 'libsql') {
             return;
         }
-
-        Blueprint::macro('vectorIndex', function ($column, $indexName) {
-            /** @var Blueprint $this **/
-            return DB::statement("CREATE INDEX {$indexName} ON {$this->table}(libsql_vector_idx({$column}))");
-        });
-
-        Builder::macro('nearest', function ($indexName, $vector, $limit = 10) {
-            /** @var Builder $this **/
-            return $this->joinSub(
-                DB::table(DB::raw("vector_top_k('$indexName', '[" . implode(',', $vector) . "]', $limit)")),
-                'v',
-                "{$this->from}.rowid",
-                '=',
-                'v.id'
-            );
-        });
     }
-
 
     public function configurePackage(Package $package): void
     {
@@ -48,23 +31,15 @@ class LibsqlServiceProvider extends PackageServiceProvider
     public function register(): void
     {
         parent::register();
+
+        VectorMacro::create();
+
         $this->app->singleton('db.factory', function ($app) {
-            return new class ($app) extends ConnectionFactory {
-                protected function createConnection($driver, $connection, $database, $prefix = '', array $config = [])
-                {
-                    return new LibsqlConnection(
-                        function () use ($config) {
-                            return new \Libsql\PDO(
-                                database: $config["database"] ?? null,
-                                password: $config["password"] ?? null,
-                                options: $config,
-                            );
-                        },
-                        database: $config["database"] ?? '',
-                        config: $config,
-                    );
-                }
-            };
+            return new LibsqlConnectionFactory($app);
+        });
+
+        $this->app->scoped(LibsqlManager::class, function ($app) {
+            return new LibsqlManager(config('database.connections.libsql'));
         });
 
         $this->app->resolving('db', function (DatabaseManager $db) {
@@ -75,17 +50,15 @@ class LibsqlServiceProvider extends PackageServiceProvider
                     $config['driver'] = 'libsql';
                 }
 
-                return new LibsqlConnection(
-                    function () use ($config) {
-                        return new \Libsql\PDO(
-                            $config["database"] ?? null,
-                            password: $config["password"] ?? null,
-                            options: $config
-                        );
-                    },
-                    database: $config["database"] ?? null,
-                    config: $config,
-                );
+                $connector = new LibsqlConnector();
+                $db = $connector->connect($config);
+
+                $connection = new LibsqlConnection($db, $config['database'] ?? ':memory:', $config['prefix'], $config);
+                app()->instance(LibsqlConnection::class, $connection);
+
+                $connection->createReadPdo($config);
+
+                return $connection;
             });
         });
     }
