@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
 
-declare(strict_types=1);
-
 namespace Libsql\Laravel;
 
 use Libsql\Laravel\Vector\VectorMacro;
@@ -45,6 +43,11 @@ class LibsqlServiceProvider extends PackageServiceProvider
         $this->app->resolving('db', function (DatabaseManager $db) {
             $db->extend('libsql', function ($config, $name) {
                 $config = config('database.connections.libsql');
+
+                if (isset($config['enabled']) && $config['enabled'] === false) {
+                    return null;
+                }
+
                 $config['name'] = $name;
                 if (!isset($config['driver'])) {
                     $config['driver'] = 'libsql';
