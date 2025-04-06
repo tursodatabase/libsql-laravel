@@ -19,7 +19,7 @@
         "friendsofphp/php-cs-fixer": "^3.64",
         "phpstan/phpstan": "2.0.x-dev",
         "pestphp/pest": "^3.7",
-        "orchestra/testbench": "^9.9"
+        "orchestra/testbench": "^9.9||^10.0"
     },
     "authors": [
         {
