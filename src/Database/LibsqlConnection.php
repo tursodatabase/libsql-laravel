@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Libsql\Laravel\Database;
@@ -175,8 +176,7 @@ class LibsqlConnection extends Connection
     #[\ReturnTypeWillChange]
     protected function getDefaultSchemaGrammar(): LibsqlSchemaGrammar
     {
-        ($grammar = new LibsqlSchemaGrammar)->setConnection($this);
-        return $this->withTablePrefix($grammar);
+        return new LibsqlSchemaGrammar($this);
     }
 
     public function getSchemaBuilder(): LibsqlSchemaBuilder
@@ -200,10 +200,7 @@ class LibsqlConnection extends Connection
 
     protected function getDefaultQueryGrammar()
     {
-        ($grammar = new LibsqlQueryGrammar)->setConnection($this);
-        $this->withTablePrefix($grammar);
-
-        return $grammar;
+        return new LibsqlQueryGrammar($this);
     }
 
     public function useDefaultQueryGrammar()
@@ -258,5 +255,4 @@ class LibsqlConnection extends Connection
 
         return $this->escapeBinary($input);
     }
-
 }
