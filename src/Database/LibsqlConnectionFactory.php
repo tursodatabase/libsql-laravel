@@ -29,6 +29,6 @@ class LibsqlConnectionFactory extends ConnectionFactory
 
     public function createConnector(array $config)
     {
-        // 
+        //
     }
 }

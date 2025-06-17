@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn(string $modelName) => 'Libsql\\Laravel\\Tests\\Fixtures\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'Libsql\\Laravel\\Tests\\Fixtures\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 

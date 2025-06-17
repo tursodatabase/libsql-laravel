@@ -11,7 +11,6 @@ class LibsqlConnection extends SQLiteConnection
     #[\ReturnTypeWillChange]
     protected function getDefaultSchemaGrammar(): LibsqlSchemaGrammar
     {
-        ($grammar = new LibsqlSchemaGrammar())->setConnection($this);
-        return $this->withTablePrefix($grammar);
+        return new LibsqlSchemaGrammar($this);
     }
 }

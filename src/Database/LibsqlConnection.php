@@ -72,7 +72,7 @@ class LibsqlConnection extends Connection
 
     /**
      * Set the active PDO connection used for reads.
-     * 
+     *
      * @param LibsqlDatabase|\Closure $pdo
      * @return \Libsql\Laravel\Database\LibsqlConnection
      */
@@ -114,11 +114,7 @@ class LibsqlConnection extends Connection
             $statement = $this->getPdo()->prepare($query);
             $results = (array) $statement->query($bindings);
 
-            $decodedResults = array_map(function ($row) {
-                return decodeBlobs($row);
-            }, $results);
-
-            return $decodedResults;
+            return $results;
         });
 
         $rowValues = array_values($data);
@@ -190,7 +186,7 @@ class LibsqlConnection extends Connection
 
     public function getDefaultPostProcessor(): LibsqlQueryProcessor
     {
-        return new LibsqlQueryProcessor;
+        return new LibsqlQueryProcessor();
     }
 
     public function useDefaultPostProcessor()
@@ -229,6 +225,7 @@ class LibsqlConnection extends Connection
     {
         return (bool) preg_match('#(column(s)? .* (is|are) not unique|UNIQUE constraint failed: .*)#i', $exception->getMessage());
     }
+
 
     public function escapeString($input)
     {

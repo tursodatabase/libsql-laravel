@@ -68,23 +68,16 @@ class LibsqlDatabase
     {
         $database = $config['path'];
         $url = $config['url'];
-        $authToken = $config['authToken'];
 
         $mode = 'unknown';
 
-        if ($database === ':memory:') {
+        if ($database === ':memory:' || empty($url)) {
             $mode = 'memory';
-        }
-
-        if (empty($database) && !empty($url) && !empty($authToken)) {
+        } elseif (empty($database) && !empty($url)) {
             $mode = 'remote';
-        }
-
-        if (!empty($database) && $database !== ':memory:' && empty($url) && empty($authToken) && empty($url)) {
+        } elseif (!empty($database) && empty($url)) {
             $mode = 'local';
-        }
-
-        if (!empty($database) && $database !== ':memory:' && !empty($authToken) && !empty($url)) {
+        } elseif (!empty($database) && !empty($url)) {
             $mode = 'remote_replica';
         }
 
@@ -95,8 +88,7 @@ class LibsqlDatabase
 
     public function version(): string
     {
-        // TODO: Need to return an actual version from libSQL binary
-        return '0.0.1';
+        return '3.45.1';
     }
 
     public function inTransaction(): bool

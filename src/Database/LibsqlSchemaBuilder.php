@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Libsql\Laravel\Database;
 
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Schema\SQLiteBuilder;
@@ -127,8 +129,6 @@ class LibsqlSchemaBuilder extends SQLiteBuilder
 
     protected function grammar(): LibsqlSchemaGrammar
     {
-        $grammar = new LibsqlSchemaGrammar($this->connection);
-
-        return $grammar;
+        return new LibsqlSchemaGrammar($this->connection);
     }
 }
