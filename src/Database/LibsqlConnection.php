@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Libsql\Laravel\Database;
@@ -71,7 +72,7 @@ class LibsqlConnection extends Connection
 
     /**
      * Set the active PDO connection used for reads.
-     * 
+     *
      * @param LibsqlDatabase|\Closure $pdo
      * @return \Libsql\Laravel\Database\LibsqlConnection
      */
@@ -113,11 +114,7 @@ class LibsqlConnection extends Connection
             $statement = $this->getPdo()->prepare($query);
             $results = (array) $statement->query($bindings);
 
-            $decodedResults = array_map(function ($row) {
-                return decodeBlobs($row);
-            }, $results);
-
-            return $decodedResults;
+            return $results;
         });
 
         $rowValues = array_values($data);
@@ -175,8 +172,7 @@ class LibsqlConnection extends Connection
     #[\ReturnTypeWillChange]
     protected function getDefaultSchemaGrammar(): LibsqlSchemaGrammar
     {
-        ($grammar = new LibsqlSchemaGrammar)->setConnection($this);
-        return $this->withTablePrefix($grammar);
+        return new LibsqlSchemaGrammar($this);
     }
 
     public function getSchemaBuilder(): LibsqlSchemaBuilder
@@ -190,7 +186,7 @@ class LibsqlConnection extends Connection
 
     public function getDefaultPostProcessor(): LibsqlQueryProcessor
     {
-        return new LibsqlQueryProcessor;
+        return new LibsqlQueryProcessor();
     }
 
     public function useDefaultPostProcessor()
@@ -200,10 +196,7 @@ class LibsqlConnection extends Connection
 
     protected function getDefaultQueryGrammar()
     {
-        ($grammar = new LibsqlQueryGrammar)->setConnection($this);
-        $this->withTablePrefix($grammar);
-
-        return $grammar;
+        return new LibsqlQueryGrammar($this);
     }
 
     public function useDefaultQueryGrammar()
@@ -233,6 +226,7 @@ class LibsqlConnection extends Connection
         return (bool) preg_match('#(column(s)? .* (is|are) not unique|UNIQUE constraint failed: .*)#i', $exception->getMessage());
     }
 
+
     public function escapeString($input)
     {
         if ($input === null) {
@@ -258,5 +252,4 @@ class LibsqlConnection extends Connection
 
         return $this->escapeBinary($input);
     }
-
 }

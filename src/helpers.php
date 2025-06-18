@@ -1,5 +1,7 @@
 <?php
 
+use Libsql\Blob;
+
 function arrayToStdClass(array $array): array
 {
     $result = [];
@@ -68,39 +70,29 @@ function is_vector($value): bool
     return array_keys($value) === range(0, count($value) - 1);
 }
 
-function decodeBlobs(array $row): array
+function decode(array $result): array
 {
-    return array_map(function ($value) {
-        return is_resource($value) ? stream_get_contents($value) : $value;
-    }, $row);
-}
-
-function decodeDoubleBase64(array $result): array
-{
-    if (isset($result) && is_array($result)) {
-        foreach ($result as &$row) {
-            foreach ($row as $key => &$value) {
-                if (is_string($value) && isValidDateOrTimestamp($value)) {
-                    continue;
-                }
-
-                if (is_string($value) && $decoded = json_decode($value, true)) {
-                    $value = $decoded;
-                }
-
-                if (is_string($value) && isValidBlob($value)) {
-                    $value = base64_decode(base64_decode($value));
-                }
+    return array_map(function ($row) {
+        return array_map(function ($value) {
+            if ($value instanceof Blob) {
+                return $value->blob;
             }
-        }
-    }
 
-    return $result;
-}
+            if (!is_string($value)) {
+                return $value;
+            }
 
-function isValidBlob(mixed $value): bool
-{
-    return (bool) preg_match('/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/', $value);
+            if (isValidDateOrTimestamp($value)) {
+                return $value;
+            }
+
+            if ($decoded = json_decode($value, true)) {
+                return $decoded;
+            }
+
+            return $value;
+        }, $row);
+    }, $result);
 }
 
 function isValidDateOrTimestamp($string, $format = null): bool

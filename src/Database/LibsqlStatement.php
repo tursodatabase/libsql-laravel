@@ -6,6 +6,7 @@ namespace Libsql\Laravel\Database;
 
 use Illuminate\Support\Carbon;
 use Libsql\Statement;
+use Libsql\Blob;
 
 class LibsqlStatement
 {
@@ -62,7 +63,7 @@ class LibsqlStatement
             }
 
             $results = $this->statement->query()->fetchArray();
-            $rows = decodeDoubleBase64($results);
+            $rows = decode($results);
             $rowValues = array_values($rows);
 
             return match ($this->mode) {
@@ -79,7 +80,7 @@ class LibsqlStatement
             $this->statement->bind([$key => $value]);
         }
         $result = $this->statement->query()->fetchArray();
-        $rows = decodeDoubleBase64($result);
+        $rows = decode($result);
 
         return match ($this->mode) {
             \PDO::FETCH_ASSOC => collect($rows),
@@ -91,27 +92,20 @@ class LibsqlStatement
 
     public function execute(array $parameters = []): bool
     {
-        try {
-
-            if (empty($parameters)) {
-                $parameters = $this->bindings;
-            }
-
-            foreach ($parameters as $key => $value) {
-                $this->statement->bind([$key => $value]);
-            }
-
-            if (str_starts_with(strtolower($this->query), 'select')) {
-                $queryRows = $this->statement->query()->fetchArray();
-                $this->affectedRows = count($queryRows);
-            } else {
-                $this->affectedRows = $this->statement->execute();
-            }
-
-            return true;
-        } catch (\Exception $e) {
-            return false;
+        if (empty($parameters)) {
+            $parameters = $this->parameterCasting($this->bindings);
         }
+
+        $this->statement->bind($parameters);
+
+        if (str_starts_with(strtolower($this->query), 'select')) {
+            $queryRows = $this->statement->query()->fetchArray();
+            $this->affectedRows = count($queryRows);
+        } else {
+            $this->affectedRows = $this->statement->execute();
+        }
+
+        return true;
     }
 
     #[\ReturnTypeWillChange]
@@ -217,7 +211,7 @@ class LibsqlStatement
             };
 
             if ($type === 'blob') {
-                $value = base64_encode(base64_encode($value));
+                $value = new Blob($value);
             }
 
             if ($type === 'boolean') {
